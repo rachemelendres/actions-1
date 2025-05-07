@@ -3,7 +3,7 @@ name: Generate ASCII Artwork (Artifact)
 on: push
 
 jobs:
-    build-job: 
+    build-job:
         runs-on: ubuntu-latest
         steps:
         - name: Checkout Repo
@@ -31,7 +31,7 @@ jobs:
         - name: Download Dragon Text File
           uses: actions/download-artifact@v4
           with:
-            name: dragon-text-file         
+            name: dragon-text-file
 
         - name: Test File Exists
           run: grep -i "dragon" dragon.txt
@@ -44,6 +44,6 @@ jobs:
           uses: actions/download-artifact@v4
           with:
             name: dragon-text-file
-            
+
         - name: Read File
           run: cat dragon.txt
