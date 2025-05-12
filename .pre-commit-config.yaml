@@ -55,5 +55,5 @@ repos:
     rev: "v1.2.0"
     hooks:
       - id: mypy
-        args: [--strict, --ignore-missing-imports, --install-types, --non-interactive]
+        args: [--config-file=mypy.ini, --install-types, --non-interactive]
         files: \.(py|pyi)$
